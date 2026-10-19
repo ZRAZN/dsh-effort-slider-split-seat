@@ -1,0 +1,4 @@
+# dsh-effort-slider-split-seat：把模型座位拆成「模型 / 推理等级」两个独立按钮。
+- insert:
+    - id: effort-slider-split-seat
+      name: 'dsh-effort-slider-split-seat'

@@ -1,0 +1,46 @@
+{
+  "name": "dsh-effort-slider-split-seat",
+  "version": "0.6.0",
+  "description": "Split-seat fork of dsh-effort-slider: the composer model seat becomes two independent buttons — the model name opens the model list, the effort label opens the Claude-style effort slider (drag, snap, WebGL fire).",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-ui-model-selection"
+      ],
+      "platform": "web"
+    }
+  },
+  "license": "BSD-3-Clause",
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "NOTICE.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@deepseek-ai/cosmokit": "^1.8.6",
+    "@deepseek-ai/schemastery": "^3.18.5"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "cordis",
+    "reasoning-effort",
+    "claude",
+    "slider"
+  ]
+}
